@@ -1,5 +1,4 @@
 class PostController < ApplicationController
-end
 
 def show
     @post = Posts.find_by({ "id" => @post["id"]})
@@ -20,4 +19,6 @@ def create
     @post["place_id"] = params["post"]["place_id"]
     @post.save
     redirect_to "/places/#{@post["place_id"]}"
+end
+
 end
