@@ -1,7 +1,8 @@
 class PostController < ApplicationController
+end
 
 def show
-    @post = Post.find_by({ "id" => params ["id"]})
+    @post = Posts.find_by({ "id" => @post["id"]})
     @place = Places.find_by({ "id" => @post["place_id"]})
 end
 
