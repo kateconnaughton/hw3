@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
 
-    def index
+    def create
         @place = Places.all
     end
     
